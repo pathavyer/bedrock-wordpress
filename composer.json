@@ -28,6 +28,10 @@
       "type": "composer",
       "url": "https://wpackagist.org",
       "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/houke/acf-icon-picker"
     }
   ],
   "require": {
@@ -39,7 +43,10 @@
     "roots/bedrock-disallow-indexing": "^2.0",
     "roots/wordpress": "5.8.1",
     "roots/wp-config": "1.0.0",
-    "roots/wp-password-bcrypt": "1.0.0"
+    "roots/wp-password-bcrypt": "1.0.0",
+    "palmiak/timber-acf-wp-blocks-plugin": "^1.15",
+    "palmiak/timber-acf-wp-blocks": "^1.15",
+    "houke/acf-icon-picker": "dev-master"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.6.0",
