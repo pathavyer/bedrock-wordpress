@@ -4,8 +4,7 @@
   "license": "MIT",
   "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
   "homepage": "https://roots.io/bedrock/",
-  "authors": [
-    {
+  "authors": [{
       "name": "Scott Walkinshaw",
       "email": "scott.walkinshaw@gmail.com",
       "homepage": "https://github.com/swalkinshaw"
@@ -17,21 +16,32 @@
     }
   ],
   "keywords": [
-    "bedrock", "composer", "roots", "wordpress", "wp", "wp-config"
+    "bedrock",
+    "composer",
+    "roots",
+    "wordpress",
+    "wp",
+    "wp-config"
   ],
   "support": {
     "issues": "https://github.com/roots/bedrock/issues",
     "forum": "https://discourse.roots.io/category/bedrock"
   },
-  "repositories": [
-    {
+  "repositories": [{
       "type": "composer",
       "url": "https://wpackagist.org",
-      "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+      "only": [
+        "wpackagist-plugin/*",
+        "wpackagist-theme/*"
+      ]
     },
     {
       "type": "git",
       "url": "https://github.com/houke/acf-icon-picker"
+    },
+    {
+			"type": "vcs",
+			"url": "git@github.com:pathavyer/dplugins.git"
     }
   ],
   "require": {
@@ -44,9 +54,10 @@
     "roots/wordpress": "5.8.1",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
-    "palmiak/timber-acf-wp-blocks-plugin": "^1.15",
     "palmiak/timber-acf-wp-blocks": "^1.15",
-    "houke/acf-icon-picker": "dev-master"
+    "houke/acf-icon-picker": "dev-master",
+		"pathavyer/dplugins": "dev-master",
+    "wpackagist-plugin/timber-library": "^1.19"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.6.0",
@@ -54,15 +65,25 @@
   },
   "config": {
     "optimize-autoloader": true,
-    "preferred-install": "dist"
+    "preferred-install": "dist",
+    "allow-plugins": {
+      "composer/installers": true,
+      "roots/wordpress-core-installer": true
+    }
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
-      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+      "web/app/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin"
+      ],
+      "web/app/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "web/app/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
     },
     "wordpress-install-dir": "web/wp"
   },
