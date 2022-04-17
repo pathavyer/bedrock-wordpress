@@ -7,4 +7,5 @@ config:
   webroot: web
   database: mariadb
   xdebug: false
+  composer_version: "2.3.5"
 
